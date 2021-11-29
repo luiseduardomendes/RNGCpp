@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-E:/Clion Projects/untitled/Champions.h
+E:/GitHub/RNGCpp/Champions.h
 iostream
 -
 stdlib.h
@@ -16,7 +16,7 @@ stdio.h
 string.h
 -
 
-E:/Clion Projects/untitled/main.cpp
+E:/GitHub/RNGCpp/main.cpp
 Champions.h
-E:/Clion Projects/untitled/Champions.h
+E:/GitHub/RNGCpp/Champions.h
 

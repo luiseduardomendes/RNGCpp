@@ -26,7 +26,6 @@ int main(){
     fclose(dataFile);
     for (int i = 0; i < NUMCHAMPIONS; i ++){
         dataChampion[i].createChampion(nameChampion[i]);
-        dataChampion[i].ShowChampionInfo();
     }
 
     dataFile = fopen("saveChampions.sav", "rb");

@@ -72,10 +72,10 @@ bool Champions::isTank(){
 void Champions::createChampion(char name[20]){
     strcpy(dataChampion.nameChampion, name);
     for (int i = 0; i < 5; i++){
-        dataChampion.roleAttributes[i] = 0;
+        dataChampion.roleAttributes[i] = false;
     }
     for (int i = 0; i < 6; i++){
-        dataChampion.classAttributes[i] = 0;
+        dataChampion.classAttributes[i] = false;
     }
 
 }
