@@ -4,43 +4,35 @@ int main(){
     char nameChampion[NUMCHAMPIONS][20] = {{"Aphelios"},{"Ashe"},{"Caitlyn"},{"Draven"},{"Ezreal"},{"Jhin"},{"Jinx"},
     {"Kai'sa"},{"Kalista"},{"Kog'Maw"},{"Lucian"},{"Miss Fortune"},{"Samira"},{"Senna"},{"Sivir"},{"Tristana"},{"Twitch"},
     {"Varus"},{"Vayne"},{"Xayah"},{"Ahri"},{"Akali"},{"Anivia"},{"Annie"},{"Aurelion Sol"},{"Azir"},{"Cassiopeia"},
-    {"Corki"},{"Diana"},{"Ekko"},{"Fizz"},{"Heimerdinger"},{"Irelia"},{"Kassadin"},{"Katarina"},{"LeBlanc"},{"Lissandra"},
-    {"Lucian"},{"Lux"},{"Malzahar"},{"Neeko"},{"Orianna"},{"Pantheon"},{"Qiyana"},{"Ryze"},{"Sylas"},{"Syndra"},
-    {"Talon"},{"Twisted Fate"},{"Veigar"},{"Viego"},{"Viktor"},{"Vladimir"},{"Xerath"},{"Yasuo"},{"Zed"},{"Ziggs"},
-    {"Zoe"},{"Alistar"},{"Bardo"},{"Blitzcrank"},{"Brand"},{"Braum"},{"Galio"},{"Janna"},{"Karma"},{"Leona"},{"Lulu"},
-    {"Lux"},{"Maokai"},{"Morgana"},{"Nami"},{"Nautilus"},{"Pyke"},{"Rakan"},{"Rell"},{"Senna"},{"Seraphine"},{"Sett"},
-    {"Shaco"},{"Sona"},{"Soraka"},{"Swain"},{"Taric"},{"Thresh"},{"Vel'Koz"},{"Xerath"},{"Yuumi"},{"Zilean"},{"Zyra"},
-    {"Aatrox"},{"Camille"},{"Cho'Gath"},{"Darius"},{"Dr. Mundo"},{"Fiora"},{"Gangplank"},{"Garen"},{"Gnar"},{"Gwen"},
-    {"Heimerdinger"},{"Illaoi"},{"Irelia"},{"Jax"},{"Jayce"},{"Kayle"},{"Kennen"},{"Kled"},{"Lee Sin"},{"Malphite"},
-    {"Mordekaiser"},{"Nasus"},{"Ornn"},{"Quinn"},{"Renekton"},{"Riven"},{"Shen"},{"Singed"},{"Sion"},{"Sylas"},
-    {"Tahm Kench"},{"Teemo"},{"Tryndamere"},{"Urgot"},{"Vayne"},{"Wukong"},{"Yasuo"},{"Yone"},{"Yorick"},{"Amumu"},
-    {"Diana"},{"Elise"},{"Evelynn"},{"Fiddlesticks"},{"Gragas"},{"Graves"},{"Hecarim"},{"Ivern"},{"Jarvan IV"},
-    {"Karthus"},{"Kayn"},{"Kha'Zix"},{"Kindred"},{"Lee Sin"},{"Lillia"},{"Master Yi"},{"Nidalee"},{"Nocturne"},
-    {"Nunu e Willump"},{"Olaf"},{"Poppy"},{"Rammus"},{"Rek'Sai"},{"Rengar"},{"Rumble"},{"Sejuani"},{"Shyvana"},
-    {"Skarner"},{"Taliyah"},{"Trundle"},{"Udyr"},{"Vi"},{"Volibear"},{"Warwick"},{"Xin Zhao"}, {"Zac"}};
+    {"Corki"},{"Diana"},{"Ekko"},{"Fizz"},{"Kassadin"},{"Katarina"},{"LeBlanc"},{"Lissandra"},{"Malzahar"},{"Neeko"},
+    {"Orianna"},{"Pantheon"},{"Qiyana"},{"Ryze"},{"Syndra"},{"Talon"},{"Twisted Fate"},{"Veigar"},{"Viego"},{"Viktor"},
+    {"Vladimir"},{"Zed"},{"Ziggs"},{"Zoe"},{"Alistar"},{"Bardo"},{"Blitzcrank"},{"Brand"},{"Braum"},{"Galio"},{"Janna"},
+    {"Karma"},{"Leona"},{"Lulu"},{"Lux"},{"Maokai"},{"Morgana"},{"Nami"},{"Nautilus"},{"Pyke"},{"Rakan"},{"Rell"},
+    {"Seraphine"},{"Sett"},{"Shaco"},{"Sona"},{"Soraka"},{"Swain"},{"Taric"},{"Thresh"},{"Vel'Koz"},{"Xerath"},
+    {"Yuumi"},{"Zilean"},{"Zyra"},{"Aatrox"},{"Camille"},{"Cho'Gath"},{"Darius"},{"Dr. Mundo"},{"Fiora"},{"Gangplank"},
+    {"Garen"},{"Gnar"},{"Gwen"},{"Heimerdinger"},{"Illaoi"},{"Irelia"},{"Jax"},{"Jayce"},{"Kayle"},{"Kennen"},{"Kled"},
+    {"Lee Sin"},{"Malphite"},{"Mordekaiser"},{"Nasus"},{"Ornn"},{"Quinn"},{"Renekton"},{"Riven"},{"Shen"},{"Singed"},
+    {"Sion"},{"Sylas"},{"Tahm Kench"},{"Teemo"},{"Tryndamere"},{"Urgot"},{"Wukong"},{"Yasuo"},{"Yone"},{"Yorick"},
+    {"Amumu"},{"Elise"},{"Evelynn"},{"Fiddlesticks"},{"Gragas"},{"Graves"},{"Hecarim"},{"Ivern"},{"Jarvan IV"},
+    {"Karthus"},{"Kayn"},{"Kha'Zix"},{"Kindred"},{"Lillia"},{"Master Yi"},{"Nidalee"},{"Nocturne"},{"Nunu e Willump"},
+    {"Olaf"},{"Poppy"},{"Rammus"},{"Rek'Sai"},{"Rengar"},{"Rumble"},{"Sejuani"},{"Shyvana"},{"Skarner"},{"Taliyah"},
+    {"Trundle"},{"Udyr"},{"Vi"},{"Volibear"},{"Warwick"},{"Xin Zhao"}, {"Zac"}};
     Champions dataChampion [NUMCHAMPIONS];
     int roleInput, classInput;
 
     FILE* dataFile;
-    dataFile = fopen("saveChampions.sav", "wb");
-    fclose(dataFile);
-    for (int i = 0; i < NUMCHAMPIONS; i ++){
-        dataChampion[i].createChampion(nameChampion[i]);
-    }
 
     dataFile = fopen("saveChampions.sav", "rb");
-    for (int i = 0; i < NUMCHAMPIONS; i ++){
-        dataChampion[i].loadChampionData(dataFile);
-        dataChampion[i].ShowChampionInfo();
-    }
+    fread(&dataChampion, sizeof(dataChampion), 1, dataFile);
     fclose(dataFile);
 
-
-
-    for (int i = 0; i < 3; i ++){
-
+    for (int i = 0; i < NUMCHAMPIONS; i ++){
         dataChampion[i].ShowChampionInfo();
-        std::cout << "Insira as funcoes do campeao [-1 para encerrar]: " << std::endl;
+    }
+
+    for (int i = 0; i < NUMCHAMPIONS; i ++){
+        dataChampion[i].ShowChampionInfo();
+        std::cout << "Insira as funcoes do campeao " << i << " [-1 para encerrar]: " << std::endl;
         std::cout << "[0] Top Laner" << std::endl << "[1] Jungler" << std::endl << "[2] Mid Laner" << std::endl;
         std::cout << "[3] Ad Carry" << std::endl << "[4] Suporte" << std::endl;
         std::cin >> roleInput;
@@ -57,21 +49,17 @@ int main(){
             dataChampion[i].addClassChampion(classInput);
             std::cin >> classInput;
         }
-        dataChampion[i].storageChampion();
         dataChampion[i].ShowChampionInfo();
-        fflush(dataFile);
+        dataFile = fopen("saveChampions.sav", "wb");
+        fwrite(&dataChampion, sizeof(dataChampion), 1, dataFile);
+        fclose(dataFile);
     }
-    fclose(dataFile);
-
-    dataFile = fopen("saveChampions.sav", "rb");
-    for (int i = 0; i < NUMCHAMPIONS; i ++){
-        dataChampion[i].loadChampionData(dataFile);
-    }
-    fclose(dataFile);
 
     for (int i = 0; i < NUMCHAMPIONS; i ++){
         dataChampion[i].ShowChampionInfo();
     }
+
+
 
 
 

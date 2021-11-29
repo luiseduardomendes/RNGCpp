@@ -1,5 +1,5 @@
 #pragma once
-#define NUMCHAMPIONS 166
+#define NUMCHAMPIONS 155
 #include <iostream>
 #include <stdlib.h>
 #include <stdio.h>

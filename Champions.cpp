@@ -81,20 +81,20 @@ void Champions::createChampion(char name[20]){
 }
 
 void Champions::addClassChampion(int classChamp){
-    if (dataChampion.classAttributes[classChamp]){
+    if (!dataChampion.classAttributes[classChamp]){
         dataChampion.classAttributes[classChamp] = true;
     }
 }
 
 void Champions::addRoleChampion(int roleChamp){
-    if (dataChampion.classAttributes[roleChamp]){
-        dataChampion.classAttributes[roleChamp] = true;
+    if (!dataChampion.roleAttributes[roleChamp]){
+        dataChampion.roleAttributes[roleChamp] = true;
     }
 }
 
 void Champions::ShowChampionInfo(){
     std::string rolesStr[] = {"Top Lane", "Jungle", "Mid Lane", "Ad Carry", "Support"};
-    std::string classesStr[] = {"Rogue", "Mage", "Fighter", "Marksman", "Controll", "Tank"};
+    std::string classesStr[] = {"Assassino", "Mago", "Lutador", "Atirador", "Suporte", "Tanque"};
     std::cout << std::endl << dataChampion.nameChampion << std::endl;
     std::cout << "Roles: ";
     for (int i = 0; i < 5; i++)
