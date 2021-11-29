@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/Clion Projects/untitled/Champions.h
+iostream
+-
+stdlib.h
+-
+stdio.h
+-
+string.h
+-
+
+E:/Clion Projects/untitled/main.cpp
+Champions.h
+E:/Clion Projects/untitled/Champions.h
+
