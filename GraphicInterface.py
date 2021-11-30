@@ -50,17 +50,15 @@ class Aplication():
         self.lb_topChampions.configure(bg="#393842", fg="#a9a8a2")
         self.lb_topChampions.place(relx=0.025, rely=0.01, relwidth=0.95, relheight=0.04)
 
-        RolesAvailableTop = ["Qualquer role", "Top Laner", "Jungler", "Mid Laner", "Ad Carry", "Suporte"]
         self.vRolesTop = StringVar(root)
         self.vRolesTop.set("Roles Disponíveis Top")
-        self.cb_rolesTop = OptionMenu(self.frame1, self.vRolesTop, *RolesAvailableTop)
+        self.cb_rolesTop = OptionMenu(self.frame1, self.vRolesTop, *self.RolesAvailable)
         self.cb_rolesTop.configure(font="arial 10", bg="#393842", fg="#a9a8a2")
         self.cb_rolesTop.place(relx=0.025, rely=0.05, relwidth=0.95, relheight=0.04)
 
-        ClassAvailableTop = ["Qualquer classe", "Assassino", "Mago", "Lutador", "Atirador", "Suporte", "Tanque"]
         self.vClassesTop = StringVar(root)
         self.vClassesTop.set("Classes Disponíveis Top")
-        self.cb_classTop = OptionMenu(self.frame1, self.vClassesTop, *ClassAvailableTop)
+        self.cb_classTop = OptionMenu(self.frame1, self.vClassesTop, *self.ClassAvailable)
         self.cb_classTop.configure(font="arial 10", bg="#393842", fg="#a9a8a2")
         self.cb_classTop.place(relx=0.025, rely=0.1, relwidth=0.95, relheight=0.04)
 
@@ -69,17 +67,15 @@ class Aplication():
         self.lb_jgChampions.configure(bg="#393842", fg="#a9a8a2")
         self.lb_jgChampions.place(relx=0.025, rely=0.15, relwidth=0.95, relheight=0.04)
 
-        RolesAvailableJg = ["Qualquer role", "Top Laner", "Jungler", "Mid Laner", "Ad Carry", "Suporte"]
-        vRolesJg = StringVar()
-        vRolesJg.set("Roles Disponíveis Jg")
-        self.cb_rolesJg = OptionMenu(self.frame1, vRolesJg, *RolesAvailableJg)
+        self.vRolesJg = StringVar()
+        self.vRolesJg.set("Roles Disponíveis Jg")
+        self.cb_rolesJg = OptionMenu(self.frame1, self.vRolesJg, *self.RolesAvailable)
         self.cb_rolesJg.configure(font="arial 10", bg="#393842", fg="#a9a8a2")
         self.cb_rolesJg.place(relx=0.025, rely=0.2, relwidth=0.95, relheight=0.04)
 
-        ClassAvailableJg = ["Qualquer classe", "Assassino", "Mago", "Lutador", "Atirador", "Suporte", "Tanque"]
-        vClassesJg = StringVar()
-        vClassesJg.set("Classes Disponíveis Jg")
-        self.cb_classJg = OptionMenu(self.frame1, vClassesJg, *ClassAvailableJg)
+        self.vClassesJg = StringVar()
+        self.vClassesJg.set("Classes Disponíveis Jg")
+        self.cb_classJg = OptionMenu(self.frame1, self.vClassesJg, *self.ClassAvailable)
         self.cb_classJg.configure(font="arial 10", bg="#393842", fg="#a9a8a2")
         self.cb_classJg.place(relx=0.025, rely=0.25, relwidth=0.95, relheight=0.04)
 
@@ -88,17 +84,15 @@ class Aplication():
         self.lb_midChampions.configure(bg="#393842", fg="#a9a8a2")
         self.lb_midChampions.place(relx=0.025, rely=0.3, relwidth=0.95, relheight=0.04)
 
-        RolesAvailableMid = ["Qualquer role", "Top Laner", "Jungler", "Mid Laner", "Ad Carry", "Suporte"]
-        vRolesMid = StringVar()
-        vRolesMid.set("Roles Disponíveis Mid")
-        self.cb_rolesMid = OptionMenu(self.frame1, vRolesMid, *RolesAvailableMid)
+        self.vRolesMid = StringVar()
+        self.vRolesMid.set("Roles Disponíveis Mid")
+        self.cb_rolesMid = OptionMenu(self.frame1, self.vRolesMid, *self.RolesAvailable)
         self.cb_rolesMid.configure(font="arial 10", bg="#393842", fg="#a9a8a2")
         self.cb_rolesMid.place(relx=0.025, rely=0.35, relwidth=0.95, relheight=0.04)
 
-        ClassAvailableMid = ["Qualquer classe", "Assassino", "Mago", "Lutador", "Atirador", "Suporte", "Tanque"]
-        vClassesMid = StringVar()
-        vClassesMid.set("Classes Disponíveis Mid")
-        self.cb_classMid = OptionMenu(self.frame1, vClassesMid, *ClassAvailableMid)
+        self.vClassesMid = StringVar()
+        self.vClassesMid.set("Classes Disponíveis Mid")
+        self.cb_classMid = OptionMenu(self.frame1, self.vClassesMid, *self.ClassAvailable)
         self.cb_classMid.configure(font="arial 10", bg="#393842", fg="#a9a8a2")
         self.cb_classMid.place(relx=0.025, rely=0.40, relwidth=0.95, relheight=0.04)
 
@@ -107,17 +101,15 @@ class Aplication():
         self.lb_adcChampions.configure(bg="#393842", fg="#a9a8a2")
         self.lb_adcChampions.place(relx=0.025, rely=0.45, relwidth=0.95, relheight=0.04)
 
-        RolesAvailableAdc = ["Qualquer role", "Top Laner", "Jungler", "Mid Laner", "Ad Carry", "Suporte"]
-        vRolesAdc = StringVar()
-        vRolesAdc.set("Roles Disponíveis Adc")
-        self.cb_rolesAdc = OptionMenu(self.frame1, vRolesAdc, *RolesAvailableAdc)
+        self.vRolesAdc = StringVar()
+        self.vRolesAdc.set("Roles Disponíveis Adc")
+        self.cb_rolesAdc = OptionMenu(self.frame1, self.vRolesAdc, *self.RolesAvailable)
         self.cb_rolesAdc.configure(font="arial 10", bg="#393842", fg="#a9a8a2")
         self.cb_rolesAdc.place(relx=0.025, rely=0.5, relwidth=0.95, relheight=0.04)
 
-        ClassAvailableAdc = ["Qualquer classe", "Assassino", "Mago", "Lutador", "Atirador", "Suporte", "Tanque"]
-        vClassesAdc = StringVar()
-        vClassesAdc.set("Classes Disponíveis Adc")
-        self.cb_classAdc = OptionMenu(self.frame1, vClassesAdc, *ClassAvailableAdc)
+        self.vClassesAdc = StringVar()
+        self.vClassesAdc.set("Classes Disponíveis Adc")
+        self.cb_classAdc = OptionMenu(self.frame1, self.vClassesAdc, *self.ClassAvailable)
         self.cb_classAdc.configure(font="arial 10", bg="#393842", fg="#a9a8a2")
         self.cb_classAdc.place(relx=0.025, rely=0.55, relwidth=0.95, relheight=0.04)
 
@@ -126,17 +118,15 @@ class Aplication():
         self.lb_supChampions.configure(bg="#393842", fg="#a9a8a2")
         self.lb_supChampions.place(relx=0.025, rely=0.6, relwidth=0.95, relheight=0.04)
 
-        RolesAvailableSup = ["Qualquer role", "Top Laner", "Jungler", "Mid Laner", "Ad Carry", "Suporte"]
-        vRolesSup = StringVar()
-        vRolesSup.set("Roles Disponíveis Sup")
-        self.cb_rolesSup = OptionMenu(self.frame1, vRolesSup, *RolesAvailableSup)
+        self.vRolesSup = StringVar()
+        self.vRolesSup.set("Roles Disponíveis Sup")
+        self.cb_rolesSup = OptionMenu(self.frame1, self.vRolesSup, *self.RolesAvailable)
         self.cb_rolesSup.configure(font="arial 10", bg="#393842", fg="#a9a8a2")
         self.cb_rolesSup.place(relx=0.025, rely=0.65, relwidth=0.95, relheight=0.04)
 
-        ClassAvailableSup = ["Qualquer classe", "Assassino", "Mago", "Lutador", "Atirador", "Suporte", "Tanque"]
-        vClassesSup = StringVar()
-        vClassesSup.set("Classes Disponíveis Sup")
-        self.cb_classSup = OptionMenu(self.frame1, vClassesSup, *ClassAvailableSup)
+        self.vClassesSup = StringVar()
+        self.vClassesSup.set("Classes Disponíveis Sup")
+        self.cb_classSup = OptionMenu(self.frame1, self.vClassesSup, *self.ClassAvailable)
         self.cb_classSup.configure(font="arial 10", bg="#393842", fg="#a9a8a2")
         self.cb_classSup.place(relx=0.025, rely=0.70, relwidth=0.95, relheight=0.04)
 
@@ -146,24 +136,74 @@ class Aplication():
         self.btnGenerate.place(relx=0.025, rely=0.80, relwidth=0.95, relheight=0.1)
 
     def generateRandomChampions(self):
-        for i in range (0, 5):
-            if self.vRolesTop.get() == self.RolesAvailable[i]:
-                roleSelected = i - 1
-        for i in range (0, 6):
-            if self.vClassesTop.get() == self.ClassAvailable[i]:
-                classSelected = i - 1
+        for j in range (0, 5):
+            if j == 0:
+                for i in range (0, 5):
+                    
+                    if self.vRolesTop.get() == self.RolesAvailable[i]:
+                        roleSelected = i - 1
+                for i in range (0, 6):
+                    if self.vClassesTop.get() == self.ClassAvailable[i]:
+                        classSelected = i - 1
+            elif j == 1:
+                for i in range (0, 5):
+                    if self.vRolesJg.get() == self.RolesAvailable[i]:
+                        roleSelected = i - 1
+                for i in range (0, 6):
+                    if self.vClassesJg.get() == self.ClassAvailable[i]:
+                        classSelected = i - 1
 
-        system(f"./RNG {roleSelected} {classSelected}")
-        self.getChampionGenerated()
-        self.showChampSelected()
+            elif j == 2:
+                for i in range (0, 5):
+                    if self.vRolesMid.get() == self.RolesAvailable[i]:
+                        roleSelected = i - 1
+                for i in range (0, 6):
+                    if self.vClassesMid.get() == self.ClassAvailable[i]:
+                        classSelected = i - 1
+
+            elif j == 3:
+                for i in range (0, 5):
+                    if self.vRolesAdc.get() == self.RolesAvailable[i]:
+                        roleSelected = i - 1
+                for i in range (0, 6):
+                    if self.vClassesAdc.get() == self.ClassAvailable[i]:
+                        classSelected = i - 1
+
+            elif j == 4:
+                for i in range (0, 5):
+                    if self.vRolesSup.get() == self.RolesAvailable[i]:
+                        roleSelected = i - 1
+                for i in range (0, 6):
+                    if self.vClassesSup.get() == self.ClassAvailable[i]:
+                        classSelected = i - 1
+            system(f".\\RNG.exe {roleSelected} {classSelected}")
+            self.getChampionGenerated()
+            self.showChampSelected(j)
         
     def getChampionGenerated(self):
         dataFile = open("output.txt")
         self.champSelected = dataFile.readline()
         dataFile.close()
 
-    def showChampSelected(self):
-        self.lb_championTopLane = Label(self.frame2, text=f"{self.champSelected}")
-        self.lb_championTopLane.configure(font="arial 15", bg="#393842", fg="#a9a8a2")
-        self.lb_championTopLane.place(relx=0.025, rely=0.01, relwidth=0.2, relheight=0.1)
+    def showChampSelected(self, j):
+        if j == 0:
+            self.lb_championTopLane = Label(self.frame2, text=f"{self.champSelected}")
+            self.lb_championTopLane.configure(font="arial 15", bg="#393842", fg="#a9a8a2")
+            self.lb_championTopLane.place(relx=0.025, rely=0.01, relwidth=0.2, relheight=0.1)
+        elif j == 1:
+            self.lb_championTopLane = Label(self.frame2, text=f"{self.champSelected}")
+            self.lb_championTopLane.configure(font="arial 15", bg="#393842", fg="#a9a8a2")
+            self.lb_championTopLane.place(relx=0.2, rely=0.2, relwidth=0.2, relheight=0.1)
+        elif j == 2:
+            self.lb_championTopLane = Label(self.frame2, text=f"{self.champSelected}")
+            self.lb_championTopLane.configure(font="arial 15", bg="#393842", fg="#a9a8a2")
+            self.lb_championTopLane.place(relx=0.4, rely=0.4, relwidth=0.2, relheight=0.1)
+        elif j == 3:
+            self.lb_championTopLane = Label(self.frame2, text=f"{self.champSelected}")
+            self.lb_championTopLane.configure(font="arial 15", bg="#393842", fg="#a9a8a2")
+            self.lb_championTopLane.place(relx=0.6, rely=0.6, relwidth=0.2, relheight=0.1)
+        elif j == 4:
+            self.lb_championTopLane = Label(self.frame2, text=f"{self.champSelected}")
+            self.lb_championTopLane.configure(font="arial 15", bg="#393842", fg="#a9a8a2")
+            self.lb_championTopLane.place(relx=0.8, rely=0.8, relwidth=0.2, relheight=0.1)
 Aplication()

@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
-#include <ctime>
+#include <time.h>
 
 enum{TOPLANE, JUNGLE, MIDLANE, ADCARRY, SUPPORT};
 enum{ROGUE, MAGE, FIGHTER, MARKSMAN, CONTROLL, TANK};

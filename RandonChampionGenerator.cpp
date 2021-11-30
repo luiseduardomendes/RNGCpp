@@ -10,7 +10,7 @@ int main(int argv, char** argc){
     int numValidChampions = 0;
     int roleSearch = atoi(argc[1]);
     int classSearch = atoi(argc[2]);
-    int champSelected;
+    int champSelected, champRandom;
 
     char *champName;
 
@@ -25,28 +25,22 @@ int main(int argv, char** argc){
             numValidChampions ++;
 
 
-    champSelected = rand() % numValidChampions;
+    champRandom = rand() % numValidChampions;
 
-    int i = 0;
-    while (numValidChampions >= 0){
-        if (testValidChampion(roleSearch, classSearch, champions[i])){
-            numValidChampions --;
-            if (numValidChampions > 0)
-                i++;
-            else if (numValidChampions == 0){
-                champSelected = i;
-            }
-            else{
-                champSelected = i;
-            }
-        }
-        else if (i >= NUMCHAMPIONS){
-            i == 0;
-        }
+    std::cout << champRandom << std::endl;  
+
+    int count = 0, j = 0;
+
+    while(count != champRandom) {
+        if (testValidChampion(roleSearch, classSearch, champions[j]) && count != champRandom)
+            count ++;
+        if (count != champRandom)
+            j ++;
         else{
-            i ++;
+            champSelected = j;
         }
     }
+    
 
     champName = champions[champSelected].showName();  
 
