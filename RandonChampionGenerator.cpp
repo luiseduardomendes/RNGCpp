@@ -26,15 +26,34 @@ int main(int argv, char** argc){
 
 
     champSelected = rand() % numValidChampions;
-    
-    std::cout << champSelected << std::endl;
 
-    champName = champions[champSelected].showName();
+    int i = 0;
+    while (numValidChampions >= 0){
+        if (testValidChampion(roleSearch, classSearch, champions[i])){
+            numValidChampions --;
+            if (numValidChampions > 0)
+                i++;
+            else if (numValidChampions == 0){
+                champSelected = i;
+            }
+            else{
+                champSelected = i;
+            }
+        }
+        else if (i >= NUMCHAMPIONS){
+            i == 0;
+        }
+        else{
+            i ++;
+        }
+    }
 
-    
+    champName = champions[champSelected].showName();  
+
+    std::cout << champSelected << " " << champName << std::endl;  
     
     dataFile = fopen("output.txt", "w");
-    fprintf(dataFile, champName);
+    fprintf(dataFile, "%s", champName);
     fclose(dataFile);
     return 0;
 }

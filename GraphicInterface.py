@@ -153,7 +153,7 @@ class Aplication():
             if self.vClassesTop.get() == self.ClassAvailable[i]:
                 classSelected = i - 1
 
-        system(f".\\teste7.exe {roleSelected} {classSelected}")
+        system(f"./RNG {roleSelected} {classSelected}")
         self.getChampionGenerated()
         self.showChampSelected()
         
