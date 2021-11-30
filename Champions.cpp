@@ -119,3 +119,7 @@ void Champions::storageChampion() {
 void Champions::loadChampionData(FILE* dataFile) {
     fread(&dataChampion, sizeof(dataChampion), 1, dataFile);
 }
+
+char *Champions::showName(){
+    return dataChampion.nameChampion;
+}

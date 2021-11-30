@@ -12,6 +12,8 @@ int main(int argv, char** argc){
     int classSearch = atoi(argc[2]);
     int champSelected;
 
+    char *champName;
+
     Champions champions[NUMCHAMPIONS];
 
     FILE* dataFile = fopen("saveChampions.sav", "rb");
@@ -26,8 +28,13 @@ int main(int argv, char** argc){
     champSelected = rand() % numValidChampions;
     
     std::cout << champSelected << std::endl;
-    dataFile = fopen("E:/GitHub/R/output.txt", "w");
-    fprintf(dataFile, "%d", champSelected);
+
+    champName = champions[champSelected].showName();
+
+    
+    
+    dataFile = fopen("output.txt", "w");
+    fprintf(dataFile, champName);
     fclose(dataFile);
     return 0;
 }

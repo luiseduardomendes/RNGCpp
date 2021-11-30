@@ -1,5 +1,6 @@
 from tkinter import *
 from os import system
+from tkinter import font
 
 root = Tk()
 
@@ -152,5 +153,17 @@ class Aplication():
             if self.vClassesTop.get() == self.ClassAvailable[i]:
                 classSelected = i - 1
 
-        system(f".\\teste6.exe {roleSelected} {classSelected}")
+        system(f".\\teste7.exe {roleSelected} {classSelected}")
+        self.getChampionGenerated()
+        self.showChampSelected()
+        
+    def getChampionGenerated(self):
+        dataFile = open("output.txt")
+        self.champSelected = dataFile.readline()
+        dataFile.close()
+
+    def showChampSelected(self):
+        self.lb_championTopLane = Label(self.frame2, text=f"{self.champSelected}")
+        self.lb_championTopLane.configure(font="arial 15", bg="#393842", fg="#a9a8a2")
+        self.lb_championTopLane.place(relx=0.025, rely=0.01, relwidth=0.2, relheight=0.1)
 Aplication()

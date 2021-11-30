@@ -40,4 +40,5 @@ public:
     void ShowChampionInfo();
     void storageChampion();
     void loadChampionData(FILE* dataFile);
+    char *showName();
 };
