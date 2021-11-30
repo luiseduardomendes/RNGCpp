@@ -1,9 +1,11 @@
 #pragma once
 #define NUMCHAMPIONS 155
 #include <iostream>
+#include <cstdlib>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <ctime>
 
 enum{TOPLANE, JUNGLE, MIDLANE, ADCARRY, SUPPORT};
 enum{ROGUE, MAGE, FIGHTER, MARKSMAN, CONTROLL, TANK};

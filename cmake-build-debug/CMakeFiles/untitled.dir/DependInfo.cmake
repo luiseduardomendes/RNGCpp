@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "E:/GitHub/RNGCpp/Champions.cpp" "E:/GitHub/RNGCpp/cmake-build-debug/CMakeFiles/untitled.dir/Champions.cpp.obj"
+  "E:/GitHub/RNGCpp/RandonChampionGenerator.cpp" "E:/GitHub/RNGCpp/cmake-build-debug/CMakeFiles/untitled.dir/RandonChampionGenerator.cpp.obj"
   "E:/GitHub/RNGCpp/main.cpp" "E:/GitHub/RNGCpp/cmake-build-debug/CMakeFiles/untitled.dir/main.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")

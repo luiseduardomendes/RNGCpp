@@ -1,5 +1,5 @@
 #include "Champions.h"
-
+/*
 int main(){
     char nameChampion[NUMCHAMPIONS][20] = {{"Aphelios"},{"Ashe"},{"Caitlyn"},{"Draven"},{"Ezreal"},{"Jhin"},{"Jinx"},
     {"Kai'sa"},{"Kalista"},{"Kog'Maw"},{"Lucian"},{"Miss Fortune"},{"Samira"},{"Senna"},{"Sivir"},{"Tristana"},{"Twitch"},

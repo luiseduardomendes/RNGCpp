@@ -152,6 +152,30 @@ Champions.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/Champions.cpp.s
 .PHONY : Champions.cpp.s
 
+RandonChampionGenerator.obj: RandonChampionGenerator.cpp.obj
+.PHONY : RandonChampionGenerator.obj
+
+# target to build an object file
+RandonChampionGenerator.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/RandonChampionGenerator.cpp.obj
+.PHONY : RandonChampionGenerator.cpp.obj
+
+RandonChampionGenerator.i: RandonChampionGenerator.cpp.i
+.PHONY : RandonChampionGenerator.i
+
+# target to preprocess a source file
+RandonChampionGenerator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/RandonChampionGenerator.cpp.i
+.PHONY : RandonChampionGenerator.cpp.i
+
+RandonChampionGenerator.s: RandonChampionGenerator.cpp.s
+.PHONY : RandonChampionGenerator.s
+
+# target to generate assembly for a file
+RandonChampionGenerator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\untitled.dir\build.make CMakeFiles/untitled.dir/RandonChampionGenerator.cpp.s
+.PHONY : RandonChampionGenerator.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -188,6 +212,9 @@ help:
 	@echo ... Champions.obj
 	@echo ... Champions.i
 	@echo ... Champions.s
+	@echo ... RandonChampionGenerator.obj
+	@echo ... RandonChampionGenerator.i
+	@echo ... RandonChampionGenerator.s
 	@echo ... main.obj
 	@echo ... main.i
 	@echo ... main.s

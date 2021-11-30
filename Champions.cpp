@@ -94,7 +94,7 @@ void Champions::addRoleChampion(int roleChamp){
 
 void Champions::ShowChampionInfo(){
     std::string rolesStr[] = {"Top Lane", "Jungle", "Mid Lane", "Ad Carry", "Support"};
-    std::string classesStr[] = {"Assassino", "Mago", "Lutador", "Atirador", "Suporte", "Tanque"};
+    std::string classesStr[] = {"Assassino", "Mago", "Lutador", "Atirador", "Suporte", "Tanque-"};
     std::cout << std::endl << dataChampion.nameChampion << std::endl;
     std::cout << "Roles: ";
     for (int i = 0; i < 5; i++)

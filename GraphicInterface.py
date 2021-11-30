@@ -54,9 +54,9 @@ class Aplication():
         ClassAvailableTop = ["Qualquer classe", "Assassino", "Mago", "Lutador", "Atirador", "Suporte", "Tanque"]
         vClassesTop = StringVar()
         vClassesTop.set("Classes Disponíveis Top")
-        self.cb_rolesTop = OptionMenu(self.frame1, vClassesTop, *ClassAvailableTop)
-        self.cb_rolesTop.configure(font="arial 10", bg="#393842", fg="#a9a8a2")
-        self.cb_rolesTop.place(relx=0.025, rely=0.1, relwidth=0.95, relheight=0.04)
+        self.cb_classTop = OptionMenu(self.frame1, vClassesTop, *ClassAvailableTop)
+        self.cb_classTop.configure(font="arial 10", bg="#393842", fg="#a9a8a2")
+        self.cb_classTop.place(relx=0.025, rely=0.1, relwidth=0.95, relheight=0.04)
 
     def JgButtons(self):
         self.lb_jgChampions = Label(self.frame1, text="Jungler:", font="arial 11")
@@ -73,9 +73,9 @@ class Aplication():
         ClassAvailableJg = ["Qualquer classe", "Assassino", "Mago", "Lutador", "Atirador", "Suporte", "Tanque"]
         vClassesJg = StringVar()
         vClassesJg.set("Classes Disponíveis Jg")
-        self.cb_rolesJg = OptionMenu(self.frame1, vClassesJg, *ClassAvailableJg)
-        self.cb_rolesJg.configure(font="arial 10", bg="#393842", fg="#a9a8a2")
-        self.cb_rolesJg.place(relx=0.025, rely=0.29, relwidth=0.95, relheight=0.04)
+        self.cb_classJg = OptionMenu(self.frame1, vClassesJg, *ClassAvailableJg)
+        self.cb_classJg.configure(font="arial 10", bg="#393842", fg="#a9a8a2")
+        self.cb_classJg.place(relx=0.025, rely=0.29, relwidth=0.95, relheight=0.04)
 
     def MidButtons(self):
         self.lb_midChampions = Label(self.frame1, text="Mid Laners:", font="arial 11")
@@ -92,9 +92,9 @@ class Aplication():
         ClassAvailableMid = ["Qualquer classe", "Assassino", "Mago", "Lutador", "Atirador", "Suporte", "Tanque"]
         vClassesMid = StringVar()
         vClassesMid.set("Classes Disponíveis Mid")
-        self.cb_rolesMid = OptionMenu(self.frame1, vClassesMid, *ClassAvailableMid)
-        self.cb_rolesMid.configure(font="arial 10", bg="#393842", fg="#a9a8a2")
-        self.cb_rolesMid.place(relx=0.025, rely=0.48, relwidth=0.95, relheight=0.04)
+        self.cb_classMid = OptionMenu(self.frame1, vClassesMid, *ClassAvailableMid)
+        self.cb_classMid.configure(font="arial 10", bg="#393842", fg="#a9a8a2")
+        self.cb_classMid.place(relx=0.025, rely=0.48, relwidth=0.95, relheight=0.04)
 
     def AdcButtons(self):
         self.lb_adcChampions = Label(self.frame1, text="Ad Carry:", font="arial 11")
@@ -111,9 +111,9 @@ class Aplication():
         ClassAvailableAdc = ["Qualquer classe", "Assassino", "Mago", "Lutador", "Atirador", "Suporte", "Tanque"]
         vClassesAdc = StringVar()
         vClassesAdc.set("Classes Disponíveis Adc")
-        self.cb_rolesAdc = OptionMenu(self.frame1, vClassesAdc, *ClassAvailableAdc)
-        self.cb_rolesAdc.configure(font="arial 10", bg="#393842", fg="#a9a8a2")
-        self.cb_rolesAdc.place(relx=0.025, rely=0.65, relwidth=0.95, relheight=0.04)
+        self.cb_classAdc = OptionMenu(self.frame1, vClassesAdc, *ClassAvailableAdc)
+        self.cb_classAdc.configure(font="arial 10", bg="#393842", fg="#a9a8a2")
+        self.cb_classAdc.place(relx=0.025, rely=0.65, relwidth=0.95, relheight=0.04)
 
     def SupButtons(self):
         self.lb_supChampions = Label(self.frame1, text="Suporte:", font="arial 11")
@@ -130,8 +130,8 @@ class Aplication():
         ClassAvailableSup = ["Qualquer classe", "Assassino", "Mago", "Lutador", "Atirador", "Suporte", "Tanque"]
         vClassesSup = StringVar()
         vClassesSup.set("Classes Disponíveis Sup")
-        self.cb_rolesSup = OptionMenu(self.frame1, vClassesSup, *ClassAvailableSup)
-        self.cb_rolesSup.configure(font="arial 10", bg="#393842", fg="#a9a8a2")
-        self.cb_rolesSup.place(relx=0.025, rely=0.84, relwidth=0.95, relheight=0.04)
+        self.cb_classSup = OptionMenu(self.frame1, vClassesSup, *ClassAvailableSup)
+        self.cb_classSup.configure(font="arial 10", bg="#393842", fg="#a9a8a2")
+        self.cb_classSup.place(relx=0.025, rely=0.84, relwidth=0.95, relheight=0.04)
 
 Aplication()
