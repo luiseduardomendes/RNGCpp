@@ -26,6 +26,10 @@ int main(int argv, char** argc){
     champSelected = rand() % numValidChampions;
     
     std::cout << champSelected << std::endl;
+    dataFile = fopen("E:/GitHub/R/output.txt", "w");
+    fprintf(dataFile, "%d", champSelected);
+    fclose(dataFile);
+    return 0;
 }
 
 bool testValidChampion(int roleSearch, int classSearch, Champions champion){
@@ -56,7 +60,7 @@ bool testValidChampion(int roleSearch, int classSearch, Champions champion){
             return false;
 
     }
-    return false;
+    return true;
 }
 
 bool testClass(int classSearch, Champions champion){
@@ -92,5 +96,5 @@ bool testClass(int classSearch, Champions champion){
             return false;
             break;
     }
-    return false;
+    return true;
 }
