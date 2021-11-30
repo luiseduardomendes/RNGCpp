@@ -12,7 +12,7 @@ class Aplication():
         root.mainloop()
     
     def display(self):
-        self.root.title("Analisador de dados")
+        self.root.title("Gerador de Composições aleatórias")
         self.root.configure(background="#2c2d31")
         self.root.geometry("1024x576")
         self.root.resizable(False, False)
@@ -39,6 +39,11 @@ class Aplication():
         self.SupButtons()
 
     def TopButtons(self):
+
+        self.lb_topChampions = Label(self.frame1, text="Top Laner:", font="arial 11")
+        self.lb_topChampions.configure(bg="#393842", fg="#a9a8a2")
+        self.lb_topChampions.place(relx=0.025, rely=0.01, relwidth=0.95, relheight=0.04)
+
         RolesAvailableTop = ["Qualquer role", "Top Laner", "Jungler", "Mid Laner", "Ad Carry", "Suporte"]
         vRolesTop = StringVar()
         vRolesTop.set("Roles Disponíveis Top")
@@ -54,6 +59,10 @@ class Aplication():
         self.cb_rolesTop.place(relx=0.025, rely=0.1, relwidth=0.95, relheight=0.04)
 
     def JgButtons(self):
+        self.lb_jgChampions = Label(self.frame1, text="Jungler:", font="arial 11")
+        self.lb_jgChampions.configure(bg="#393842", fg="#a9a8a2")
+        self.lb_jgChampions.place(relx=0.025, rely=0.2, relwidth=0.95, relheight=0.04)
+
         RolesAvailableJg = ["Qualquer role", "Top Laner", "Jungler", "Mid Laner", "Ad Carry", "Suporte"]
         vRolesJg = StringVar()
         vRolesJg.set("Roles Disponíveis Jg")
@@ -69,6 +78,10 @@ class Aplication():
         self.cb_rolesJg.place(relx=0.025, rely=0.29, relwidth=0.95, relheight=0.04)
 
     def MidButtons(self):
+        self.lb_midChampions = Label(self.frame1, text="Mid Laners:", font="arial 11")
+        self.lb_midChampions.configure(bg="#393842", fg="#a9a8a2")
+        self.lb_midChampions.place(relx=0.025, rely=0.39, relwidth=0.95, relheight=0.04)
+
         RolesAvailableMid = ["Qualquer role", "Top Laner", "Jungler", "Mid Laner", "Ad Carry", "Suporte"]
         vRolesMid = StringVar()
         vRolesMid.set("Roles Disponíveis Mid")
@@ -84,6 +97,10 @@ class Aplication():
         self.cb_rolesMid.place(relx=0.025, rely=0.48, relwidth=0.95, relheight=0.04)
 
     def AdcButtons(self):
+        self.lb_adcChampions = Label(self.frame1, text="Ad Carry:", font="arial 11")
+        self.lb_adcChampions.configure(bg="#393842", fg="#a9a8a2")
+        self.lb_adcChampions.place(relx=0.025, rely=0.56, relwidth=0.95, relheight=0.04)
+
         RolesAvailableAdc = ["Qualquer role", "Top Laner", "Jungler", "Mid Laner", "Ad Carry", "Suporte"]
         vRolesAdc = StringVar()
         vRolesAdc.set("Roles Disponíveis Adc")
@@ -99,6 +116,10 @@ class Aplication():
         self.cb_rolesAdc.place(relx=0.025, rely=0.65, relwidth=0.95, relheight=0.04)
 
     def SupButtons(self):
+        self.lb_supChampions = Label(self.frame1, text="Suporte:", font="arial 11")
+        self.lb_supChampions.configure(bg="#393842", fg="#a9a8a2")
+        self.lb_supChampions.place(relx=0.025, rely=0.75, relwidth=0.95, relheight=0.04)
+
         RolesAvailableSup = ["Qualquer role", "Top Laner", "Jungler", "Mid Laner", "Ad Carry", "Suporte"]
         vRolesSup = StringVar()
         vRolesSup.set("Roles Disponíveis Sup")
