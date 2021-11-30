@@ -1,6 +1,7 @@
 from tkinter import *
 from os import system
 from tkinter import font
+from PIL import Image, ImageTk
 
 root = Tk()
 
@@ -9,10 +10,13 @@ class Aplication():
     def __init__(self):
         self.RolesAvailable = ["Qualquer role", "Top Laner", "Jungler", "Mid Laner", "Ad Carry", "Suporte"]
         self.ClassAvailable = ["Qualquer classe", "Assassino", "Mago", "Lutador", "Atirador", "Suporte", "Tanque"]
+        self.img1 = ImageTk.PhotoImage(file="SummonersRift.png")
         self.root = root
+        
         self.display()
         self.displayFrames()
         self.displaybuttons()
+        self.showMap()
         root.mainloop()
     
     def display(self):
@@ -24,11 +28,11 @@ class Aplication():
     def displayFrames(self):
         self.frame1 = Frame(self.root)
         self.frame1.configure(background="#393842", bd=4, relief="groove")
-        self.frame1.place(relx=0.005, rely=0.1, relheight=0.98, relwidth=0.245)
+        self.frame1.place(relx=0.005, rely=0.1, relheight=0.98, relwidth=0.395)
 
         self.frame2 = Frame(self.root)
         self.frame2.configure(background="#393842", bd=4, relief="groove")
-        self.frame2.place(relx=0.255, rely=0.1, relheight=0.98, relwidth=0.74)
+        self.frame2.place(relx=0.405, rely=0.1, relheight=0.98, relwidth=0.595  )
 
     def displaybuttons(self):
 
@@ -136,6 +140,7 @@ class Aplication():
         self.btnGenerate.place(relx=0.025, rely=0.80, relwidth=0.95, relheight=0.1)
 
     def generateRandomChampions(self):
+        self.showMap()
         for j in range (0, 5):
             if j == 0:
                 for i in range (0, 5):
@@ -176,7 +181,7 @@ class Aplication():
                 for i in range (0, 6):
                     if self.vClassesSup.get() == self.ClassAvailable[i]:
                         classSelected = i - 1
-            system(f".\\RNG.exe {roleSelected} {classSelected}")
+            system(f".\\RNG2.exe {roleSelected} {classSelected}")
             self.getChampionGenerated()
             self.showChampSelected(j)
         
@@ -188,22 +193,25 @@ class Aplication():
     def showChampSelected(self, j):
         if j == 0:
             self.lb_championTopLane = Label(self.frame2, text=f"{self.champSelected}")
-            self.lb_championTopLane.configure(font="arial 15", bg="#393842", fg="#a9a8a2")
+            self.lb_championTopLane.configure(font="arial 15", bg='#ab23ff', fg="#a9a8a2")
             self.lb_championTopLane.place(relx=0.025, rely=0.01, relwidth=0.2, relheight=0.1)
         elif j == 1:
             self.lb_championTopLane = Label(self.frame2, text=f"{self.champSelected}")
-            self.lb_championTopLane.configure(font="arial 15", bg="#393842", fg="#a9a8a2")
+            self.lb_championTopLane.configure(font="arial 15", bg='#ab23ff', fg="#a9a8a2")
             self.lb_championTopLane.place(relx=0.2, rely=0.2, relwidth=0.2, relheight=0.1)
         elif j == 2:
             self.lb_championTopLane = Label(self.frame2, text=f"{self.champSelected}")
-            self.lb_championTopLane.configure(font="arial 15", bg="#393842", fg="#a9a8a2")
+            self.lb_championTopLane.configure(font="arial 15", bg='#ab23ff', fg="#a9a8a2")
             self.lb_championTopLane.place(relx=0.4, rely=0.4, relwidth=0.2, relheight=0.1)
         elif j == 3:
             self.lb_championTopLane = Label(self.frame2, text=f"{self.champSelected}")
-            self.lb_championTopLane.configure(font="arial 15", bg="#393842", fg="#a9a8a2")
+            self.lb_championTopLane.configure(font="arial 15", bg='#ab23ff', fg="#a9a8a2")
             self.lb_championTopLane.place(relx=0.6, rely=0.6, relwidth=0.2, relheight=0.1)
         elif j == 4:
             self.lb_championTopLane = Label(self.frame2, text=f"{self.champSelected}")
-            self.lb_championTopLane.configure(font="arial 15", bg="#393842", fg="#a9a8a2")
+            self.lb_championTopLane.configure(font="arial 15", bg='#ab23ff', fg="#a9a8a2")
             self.lb_championTopLane.place(relx=0.8, rely=0.8, relwidth=0.2, relheight=0.1)
+    def showMap(self):
+        labelImage1 = Label(self.frame2, image=self.img1)
+        labelImage1.pack()
 Aplication()
