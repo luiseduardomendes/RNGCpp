@@ -193,23 +193,23 @@ class Aplication():
     def showChampSelected(self, j):
         if j == 0:
             self.lb_championTopLane = Label(self.frame2, text=f"{self.champSelected}")
-            self.lb_championTopLane.configure(font="arial 15", bg='#ab23ff', fg="#a9a8a2")
+            self.lb_championTopLane.configure(font="arial 15", bg='#393842', fg="#a9a8a2")
             self.lb_championTopLane.place(relx=0.025, rely=0.01, relwidth=0.2, relheight=0.1)
         elif j == 1:
             self.lb_championTopLane = Label(self.frame2, text=f"{self.champSelected}")
-            self.lb_championTopLane.configure(font="arial 15", bg='#ab23ff', fg="#a9a8a2")
+            self.lb_championTopLane.configure(font="arial 15", bg='#393842', fg="#a9a8a2")
             self.lb_championTopLane.place(relx=0.2, rely=0.2, relwidth=0.2, relheight=0.1)
         elif j == 2:
             self.lb_championTopLane = Label(self.frame2, text=f"{self.champSelected}")
-            self.lb_championTopLane.configure(font="arial 15", bg='#ab23ff', fg="#a9a8a2")
+            self.lb_championTopLane.configure(font="arial 15", bg='#393842', fg="#a9a8a2")
             self.lb_championTopLane.place(relx=0.4, rely=0.4, relwidth=0.2, relheight=0.1)
         elif j == 3:
             self.lb_championTopLane = Label(self.frame2, text=f"{self.champSelected}")
-            self.lb_championTopLane.configure(font="arial 15", bg='#ab23ff', fg="#a9a8a2")
+            self.lb_championTopLane.configure(font="arial 15", bg='#393842', fg="#a9a8a2")
             self.lb_championTopLane.place(relx=0.6, rely=0.6, relwidth=0.2, relheight=0.1)
         elif j == 4:
             self.lb_championTopLane = Label(self.frame2, text=f"{self.champSelected}")
-            self.lb_championTopLane.configure(font="arial 15", bg='#ab23ff', fg="#a9a8a2")
+            self.lb_championTopLane.configure(font="arial 15", bg='#393842', fg="#a9a8a2")
             self.lb_championTopLane.place(relx=0.8, rely=0.8, relwidth=0.2, relheight=0.1)
     def showMap(self):
         labelImage1 = Label(self.frame2, image=self.img1)

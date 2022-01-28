@@ -78,6 +78,11 @@ bool testValidChampion(int roleSearch, int classSearch, Champions champion){
             if(champion.isSupport() && testClass(classSearch, champion))
                 return true;
             return false;
+        
+        default:
+            if(testClass(classSearch, champion))
+                return true;
+            return false;
 
     }
     return true;
@@ -115,6 +120,8 @@ bool testClass(int classSearch, Champions champion){
                 return true;
             return false;
             break;
+        default:
+            return true;
     }
     return true;
 }
