@@ -2,6 +2,7 @@ from tkinter import *
 from os import system
 from tkinter import font
 from PIL import Image, ImageTk
+import time
 
 root = Tk()
 
@@ -184,6 +185,8 @@ class Aplication():
             system(f".\\RNG2.exe {roleSelected} {classSelected}")
             self.getChampionGenerated()
             self.showChampSelected(j)
+            time.sleep(1)
+
         
     def getChampionGenerated(self):
         dataFile = open("output.txt")

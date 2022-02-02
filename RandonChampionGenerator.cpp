@@ -7,6 +7,8 @@ bool testClass(int classSearch, Champions champion);
 int main(int argv, char** argc){
     srand(time(NULL));
 
+    
+
     int numValidChampions = 0;
     int roleSearch = atoi(argc[1]);
     int classSearch = atoi(argc[2]);
