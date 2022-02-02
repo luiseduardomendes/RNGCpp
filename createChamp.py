@@ -4,49 +4,45 @@ class ChampionsLol:
     champions = dict()
     championList = list()
 
-    data = open('champions.csv')
-
-    pattern = re.compile(r'(.+),(role),(.+),(class),(.+)')
-
-    for line in data:
-        buffer = data.readline()
-        check = pattern.findall(buffer)
-        for i in check:
-            champions['name'] = str(i[0])
-            champions['role'] = str(i[2]).split(sep=',')
-            
-            champions['class'] = str(i[4]).split(sep=',')
-            
-        print(champions)
-        championList.append(champions.copy())
+    roles = ('top laner', 'jungler', 'mid laner', 'ad carry', 'support')
+    classes = ('tank', 'support', 'marksman', 'mage', 'rogue', 'enchanter', 'fighter')
 
     championsByRole = dict()
-    championsByRole['top laner'] = list()
-    championsByRole['jungler'] = list()
-    championsByRole['mid laner'] = list()
-    championsByRole['ad carry'] = list()
-    championsByRole['support'] = list()
+    for role in roles:
+        championsByRole[role] = list()
+    
 
     championsByClass = dict()
-    championsByClass['tank'] = list()
-    championsByClass['support'] = list()
-    championsByClass['marksman'] = list()
-    championsByClass['mage'] = list()
-    championsByClass['rogue'] = list()
-    championsByClass['enchanter'] = list()
-    championsByClass['fighter'] = list()
+    for c in classes:
+        championsByClass[c] = list()
+    
+
+    def __init__(self):
+        data = open('champions.csv')
+
+        pattern = re.compile(r'(.+),(role),(.+),(class),(.+)')
+
+        for line in data:
+            buffer = data.readline()
+            check = pattern.findall(buffer)
+            for i in check:
+                self.champions['name'] = str(i[0])
+                self.champions['role'] = str(i[2]).split(sep=',')
+                
+                self.champions['class'] = str(i[4]).split(sep=',')
+
+            self.championList.append(self.champions.copy())
 
     def splitChampionByRole(self):
         for champion in self.championList:
             for i in champion['role']:
                 if self.championsByRole[i].count(champion['name']) == 0:
                     self.championsByRole[i].append(champion['name'][:])
-
-        print(self.championsByRole['top laner'])
-        print(self.championsByRole['jungler'])
-        print(self.championsByRole['mid laner'])
-        print(self.championsByRole['ad carry'])
-        print(self.championsByRole['support'])
+    
+    def showChampionsByRole(self):
+        for r in self.roles:
+            print(self.championsByRole[r])
+        
 
     def splitChampionByClass(self):
         for champion in self.championList:
@@ -54,13 +50,10 @@ class ChampionsLol:
                 if self.championsByClass[i].count(champion['name']) == 0:
                     self.championsByClass[i].append(champion['name'][:])
 
-        print(self.championsByClass['tank'])
-        print(self.championsByClass['support'])
-        print(self.championsByClass['marksman'])
-        print(self.championsByClass['mage'])
-        print(self.championsByClass['rogue'])
-        print(self.championsByClass['enchanter'])
-        print(self.championsByClass['fighter'])
+    def showChampionsByClass(self):
+        for c in self.classes:
+            print(self.championsByClass[c])
+        
 
         
 
