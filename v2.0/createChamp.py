@@ -3,23 +3,27 @@ import re
 
 
 class ChampionsLol:
-    champions = dict()
-    championList = list()
-
-    roles = ('top laner', 'jungler', 'mid laner', 'ad carry', 'support', 'any')
-    classes = ('tank', 'support', 'marksman', 'mage', 'rogue', 'enchanter', 'fighter', 'any')
-
-    championsByRole = dict()
-    for role in roles:
-        championsByRole[role] = list()
     
-
-    championsByClass = dict()
-    for c in classes:
-        championsByClass[c] = list()
     
 
     def __init__(self):
+
+        self.champions = dict()
+        self.championList = list()
+
+        self.roles = ('top laner', 'jungler', 'mid laner', 'ad carry', 'support', 'any')
+        self.classes = ('tank', 'support', 'marksman', 'mage', 'rogue', 'enchanter', 'fighter', 'any')
+
+        self.championsByRole = dict()
+        for role in self.roles:
+            self.championsByRole[role] = list()
+        
+
+        self.championsByClass = dict()
+        for c in self.classes:
+            self.championsByClass[c] = list()
+
+
         data = open('champions.csv')
 
         pattern = re.compile(r'(.+),(role),(.+),(class),(.+)')
@@ -37,6 +41,7 @@ class ChampionsLol:
         
         self.splitChampionByRole()
         self.splitChampionByClass()
+        
 
     def splitChampionByRole(self):
         for champion in self.championList:
@@ -67,10 +72,11 @@ class ChampionsLol:
         exit = False
         while not exit:
             name = self.championList[randint(0,len(self.championList)-1)]['name']
-            if name in self.championsByRole[role] and name in self.championsByClass[classe]:
+            print(self.championsByRole[role])
+            print(self.championsByClass[classe])
+            print(name)
+            
+            if name in list(self.championsByRole[role]) and name in list(self.championsByClass[classe]):
                 return name
                 exit = True
         
-
-ch = ChampionsLol()
-ch.showRandomChampion('any','any')

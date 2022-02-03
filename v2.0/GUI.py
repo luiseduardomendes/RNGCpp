@@ -101,12 +101,16 @@ class Aplication():
 
     def showChamps(self):
         self.championsSelected = list()
+        ch = ChampionsLol()
+        system("clear")
         for i in self.RolesAvailable[1:]:
             
             if self.vRoles[i].get() != self.notSelectedRole[i] and self.vClasses[i].get() != self.notSelectedClass[i]:
-                self.championsSelected.append(ChampionsLol.showRandomChampion(ChampionsLol, self.roles[self.vRoles[i].get()], self.classes[self.vClasses[i].get()]))
+                
+                self.championsSelected.append(ch.showRandomChampion(self.roles[self.vRoles[i].get()], self.classes[self.vClasses[i].get()]))
             else:  
-                self.championsSelected.append(ChampionsLol.showRandomChampion(ChampionsLol, 'any', 'any'))
+                
+                self.championsSelected.append(ch.showRandomChampion('any', 'any'))
 
         self.showChampions()
     
